@@ -1,18 +1,18 @@
 import React from 'react';
 import AvatarSelector from '../components/AvatarSelector';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 describe( '<AvatarSelector />', () => {
-  const component = mount(<AvatarSelector currentPersona='zac'/>);
+  const wrapper = mount(<AvatarSelector currentPersona='zac'/>);
 
-  it('renders 1 <AvatarSelector /> component', () => {
-    expect(component).toHaveLength(1);
+  it('renders without exploding', () => {
+    expect( shallow( <AvatarSelector currentPersona='zac'/> ).length ).toEqual(1);
   });
   it('renders props correctly', () => {
-    expect(component.props().currentPersona).toEqual('zac');
+    expect(wrapper.props().currentPersona).toEqual('zac');
   })
   it('sets img source correctly', () => {
-    expect(component.find("img").prop("src")).toContain(component.props().currentPersona);
+    expect(wrapper.find("img").prop("src")).toContain(wrapper.props().currentPersona);
   })
 
 })

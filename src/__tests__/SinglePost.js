@@ -30,8 +30,8 @@ describe('<SinglePost />', () => {
     const mockFunction = jest.fn();
     const wrapper = mount(
       <SinglePost 
-      title='title' content='content' author='Zac' id='_2321' date='2019-02-12' 
-      currentPersona='Esmeralda' onClick={mockFunction}>
+        title='title' content='content' author='Zac' id='_2321' date='2019-02-12' 
+        currentPersona='Esmeralda' onClick={mockFunction}>
       </SinglePost>
     )
     const button = wrapper.find('Button');

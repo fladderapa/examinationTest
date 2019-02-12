@@ -9,6 +9,7 @@ describe( '<CreateNewPost />', () => {
 
     const mockFunction = jest.fn();
     expect( shallow( <CreateNewPost updatePosts={mockFunction} author="Zac"/> ).length ).toEqual(1);
+
   });
   it('sets the state by input and textarea value', () => {
 
@@ -44,6 +45,7 @@ describe( '<CreateNewPost />', () => {
     const fetchedPosts = api.fetchAllPosts();
 
     expect(fetchedPosts.length).toEqual(1);
+    
   })
 
 })

@@ -9,6 +9,7 @@ describe( '<CreateNewComment />', () => {
 
     const mockFunction = jest.fn();
     expect( shallow( <CreateNewComment postId="1234" author="Zac" updateComments={mockFunction}/> ).length ).toEqual(1);
+    
   });
   it('sets the sate from textarea value', () => {
 
@@ -20,6 +21,7 @@ describe( '<CreateNewComment />', () => {
     const comment = wrapper.find('#comment').props().value;
 
     expect(wrapper.state().comment).toEqual(comment);
+
   })
   it('stores comment to api', () => {
 
@@ -35,6 +37,7 @@ describe( '<CreateNewComment />', () => {
     const fetchedComments = api.fetchAllComments();
 
     expect(fetchedComments.length).toEqual(1);
+
   })
 
 })

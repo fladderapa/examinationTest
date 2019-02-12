@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">56.76% </span>
+        <span class="strong">64.86% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>21/37</span>
+        <span class='fraction'>24/37</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">45.45% </span>
+        <span class="strong">54.55% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>5/11</span>
+        <span class='fraction'>6/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">60% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>10/20</span>
+        <span class='fraction'>12/20</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">58.82% </span>
+        <span class="strong">67.65% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>20/34</span>
+        <span class='fraction'>23/34</span>
       </div>
     </div>
   </div>
@@ -185,7 +185,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -234,8 +234,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -244,7 +244,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -254,8 +254,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -291,7 +291,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -371,7 +371,7 @@ export function removePost(postId) {
  */
 export function fetchAllComments() {
   const comments = localStorage.getItem('comments');
-  return comments ? <span class="branch-0 cbranch-no" title="branch not covered" >JSON.parse(comments) </span>: [];
+  return comments ? JSON.parse(comments) : [];
 }
 &nbsp;
 /**
@@ -379,8 +379,8 @@ export function fetchAllComments() {
  * @param {string} postId  the comments unique id
  * @param {string} author the user who made the comment
  */
-export function <span class="fstat-no" title="function not covered" >createCommentObject(</span>comment = <span class="branch-0 cbranch-no" title="branch not covered" >'',</span> postId, author){
-<span class="cstat-no" title="statement not covered" >  return {</span>
+export function createCommentObject(comment = <span class="branch-0 cbranch-no" title="branch not covered" >'',</span> postId, author){
+  return {
     comment,
     id: generateID(),
     postId,
@@ -389,9 +389,9 @@ export function <span class="fstat-no" title="function not covered" >createComme
   }
 }
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >storeCommentObject(</span>object) {
-  const stringifiedObject = <span class="cstat-no" title="statement not covered" >JSON.stringify(object);</span>
-<span class="cstat-no" title="statement not covered" >  return localStorage.setItem(`comments`, stringifiedObject);</span>
+export function storeCommentObject(object) {
+  const stringifiedObject = JSON.stringify(object);
+  return localStorage.setItem(`comments`, stringifiedObject);
 }
 &nbsp;
 export function filterComments(comments, id){
@@ -457,7 +457,7 @@ export function <span class="fstat-no" title="function not covered" >botReply(</
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 12 2019 13:31:41 GMT+0100 (GMT+01:00)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 12 2019 18:41:34 GMT+0100 (GMT+01:00)
 </div>
 </div>
 <script src="../prettify.js"></script>

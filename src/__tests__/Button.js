@@ -19,9 +19,9 @@ describe('<Button />', () => {
     if(startCurrentPage === 'home'){
       expect(wrapper.state().currentPage).toEqual('bot')
     }
-    // if(startCurrentPage === 'bot'){
-    //   expect(wrapper.state().currentPage).toEqual('home')
-    // }
+    if(startCurrentPage === 'bot'){
+      expect(wrapper.state().currentPage).toEqual('home')
+    }
   });
   it('changes text when clicked', () => {
 

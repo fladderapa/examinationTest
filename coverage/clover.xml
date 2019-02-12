@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1549974701379" clover="3.2.0">
-  <project timestamp="1549974701380" name="All files">
-    <metrics statements="135" coveredstatements="93" conditionals="34" coveredconditionals="21" methods="63" coveredmethods="39" elements="232" coveredelements="153" complexity="0" loc="135" ncloc="135" packages="3" files="15" classes="15">
+<coverage generated="1549993294469" clover="3.2.0">
+  <project timestamp="1549993294469" name="All files">
+    <metrics statements="135" coveredstatements="103" conditionals="34" coveredconditionals="22" methods="63" coveredmethods="43" elements="232" coveredelements="168" complexity="0" loc="135" ncloc="135" packages="3" files="15" classes="15">
       <package name="api">
-        <metrics statements="34" coveredstatements="20" conditionals="11" coveredconditionals="5" methods="20" coveredmethods="10"/>
+        <metrics statements="34" coveredstatements="23" conditionals="11" coveredconditionals="6" methods="20" coveredmethods="12"/>
         <file name="index.js" path="/Users/Alex/Documents/Nackademin/testExamination/src/api/index.js">
-          <metrics statements="34" coveredstatements="20" conditionals="11" coveredconditionals="5" methods="20" coveredmethods="10"/>
-          <line num="7" count="5" type="stmt"/>
+          <metrics statements="34" coveredstatements="23" conditionals="11" coveredconditionals="6" methods="20" coveredmethods="12"/>
+          <line num="7" count="6" type="stmt"/>
           <line num="20" count="5" type="stmt"/>
           <line num="33" count="13" type="stmt"/>
           <line num="34" count="13" type="cond" truecount="2" falsecount="0"/>
@@ -15,11 +15,11 @@
           <line num="47" count="1" type="stmt"/>
           <line num="48" count="2" type="stmt"/>
           <line num="49" count="1" type="stmt"/>
-          <line num="56" count="8" type="stmt"/>
-          <line num="57" count="8" type="cond" truecount="1" falsecount="1"/>
-          <line num="66" count="0" type="stmt"/>
-          <line num="76" count="0" type="stmt"/>
-          <line num="77" count="0" type="stmt"/>
+          <line num="56" count="10" type="stmt"/>
+          <line num="57" count="10" type="cond" truecount="2" falsecount="0"/>
+          <line num="66" count="1" type="stmt"/>
+          <line num="76" count="1" type="stmt"/>
+          <line num="77" count="1" type="stmt"/>
           <line num="81" count="8" type="stmt"/>
           <line num="85" count="0" type="stmt"/>
           <line num="86" count="0" type="stmt"/>
@@ -34,7 +34,7 @@
           <line num="105" count="4" type="stmt"/>
           <line num="106" count="4" type="stmt"/>
           <line num="110" count="0" type="stmt"/>
-          <line num="113" count="7" type="stmt"/>
+          <line num="113" count="8" type="stmt"/>
           <line num="129" count="0" type="stmt"/>
           <line num="130" count="0" type="stmt"/>
           <line num="131" count="0" type="stmt"/>
@@ -43,7 +43,7 @@
         </file>
       </package>
       <package name="components">
-        <metrics statements="75" coveredstatements="60" conditionals="19" coveredconditionals="15" methods="30" coveredmethods="23"/>
+        <metrics statements="75" coveredstatements="67" conditionals="19" coveredconditionals="15" methods="30" coveredmethods="25"/>
         <file name="App.js" path="/Users/Alex/Documents/Nackademin/testExamination/src/components/App.js">
           <metrics statements="9" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="5" coveredmethods="5"/>
           <line num="15" count="3" type="stmt"/>
@@ -92,16 +92,16 @@
           <line num="52" count="5" type="stmt"/>
         </file>
         <file name="CreateNewComment.js" path="/Users/Alex/Documents/Nackademin/testExamination/src/components/CreateNewComment.js">
-          <metrics statements="9" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-          <line num="14" count="0" type="stmt"/>
-          <line num="15" count="0" type="stmt"/>
-          <line num="20" count="0" type="stmt"/>
-          <line num="21" count="0" type="stmt"/>
-          <line num="22" count="0" type="stmt"/>
-          <line num="26" count="17" type="stmt"/>
-          <line num="51" count="5" type="stmt"/>
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="26" count="23" type="stmt"/>
+          <line num="51" count="6" type="stmt"/>
         </file>
         <file name="CreateNewPost.js" path="/Users/Alex/Documents/Nackademin/testExamination/src/components/CreateNewPost.js">
           <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>

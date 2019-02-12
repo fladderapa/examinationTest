@@ -27,5 +27,23 @@ describe( '<CreateNewPost />', () => {
     expect(textAreaValue).toEqual(wrapper.state().content);
 
   })
+  it('stores data to api', () => {
+
+    const mockFunction = jest.fn();
+    const wrapper = mount(<CreateNewPost updatePosts={mockFunction} author="Zac"/>);
+
+    const input= wrapper.find('#title');
+    input.simulate('change', { target: { name: 'title', value: 'En ny titel..' } });
+
+    const textArea =  wrapper.find('#content');
+    textArea.simulate('change', { target: { name: 'content', value: 'Och en massa ny content' } });
+
+    const form = wrapper.find('form');
+    form.simulate('submit');
+
+    const fetchedPosts = api.fetchAllPosts();
+
+    expect(fetchedPosts.length).toEqual(1);
+  })
 
 })

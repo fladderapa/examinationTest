@@ -14,7 +14,6 @@ describe( '<AvatarSelector />', () => {
   it('sets img source correctly', () => {
     expect(wrapper.find("img").prop("src")).toContain(wrapper.props().currentPersona);
   })
-
 })
 
 

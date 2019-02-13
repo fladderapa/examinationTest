@@ -29,5 +29,4 @@ describe( '<Bot />', () => {
     const messages = wrapper.find('Message');
     expect(wrapper.state().messages.length).toEqual(messages.length);
   })
-
 })

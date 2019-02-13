@@ -5,11 +5,9 @@ import * as api from '../api';
 
 describe('<Posts />', () => {
   it('renders without exploding', () => {
-
     expect( shallow( <Posts currentPersona="Zac"></Posts>).length ).toEqual(1);
   });
   it('renders right amount of posts', () => {
-
     const wrapper = mount(<Posts currentPersona="Zac"/>);
 
     const post = api.createPostObject("En titel", 'lite content', 'Zac');
@@ -25,7 +23,6 @@ describe('<Posts />', () => {
     expect(singlePostComponents).toEqual(postsInState);
   });
   it('removes post when deleted', () => {
-
     const wrapper = mount(<Posts currentPersona="Zac"/>);
 
     const post = api.createPostObject("En titel", 'lite content', 'Zac');
@@ -35,7 +32,7 @@ describe('<Posts />', () => {
     const posts = api.fetchAllPosts();
     wrapper.setState({ posts: posts });
 
-    const firstPost = wrapper.find('SinglePost').first();
+    const firstPost = wrapper.find('Button').first();
     firstPost.props().onClick(posts[0].id);
 
     const postsAfter = api.fetchAllPosts();

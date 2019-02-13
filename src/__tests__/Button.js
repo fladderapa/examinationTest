@@ -5,12 +5,10 @@ import { shallow, mount } from 'enzyme';
 
 describe('<Button />', () => {
   it('renders without exploding', () => {
-
     const mockFunction = jest.fn();
     expect( shallow( <Button onClick={mockFunction}>Talk to a real human</Button>).length ).toEqual(1);
   });
   it('changes App currentPage state when clicked', () => {
-
     const wrapper = mount(<App />);
     const startCurrentPage = wrapper.state().currentPage;
     const button = wrapper.find("Button");
@@ -24,7 +22,6 @@ describe('<Button />', () => {
     }
   });
   it('changes text when clicked', () => {
-
     const wrapper = mount(<App />);
     wrapper.setState({ currentPage: 'bot' });
     wrapper.update();

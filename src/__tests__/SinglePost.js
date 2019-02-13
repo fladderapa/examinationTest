@@ -1,7 +1,6 @@
 import React from 'react';
 import App from '../components/App';
 import SinglePost from '../components/SinglePost';
-import * as api from '../api';
 import { shallow, mount } from 'enzyme';
 
 describe('<SinglePost />', () => {
@@ -9,10 +8,12 @@ describe('<SinglePost />', () => {
 
     const mockFunction = jest.fn();
     
-    expect( shallow( <SinglePost 
-      title='title' content='content' author='Zac' id='_2321' date='2019-02-12' 
-      currentPersona='Esmeralda' onClick={mockFunction}>
-      </SinglePost>).length ).toEqual(1)
+    expect( shallow(
+      <SinglePost 
+        title='title' content='content' author='Zac' id='_2321' date='2019-02-12' 
+        currentPersona='Esmeralda' onClick={mockFunction}>
+      </SinglePost>).length )
+    .toEqual(1)
   });
   it('renders remove button when author and currentPersona is same', () => {
       const mockFunction = jest.fn();

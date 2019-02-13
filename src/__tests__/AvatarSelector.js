@@ -2,7 +2,7 @@ import React from 'react';
 import AvatarSelector from '../components/AvatarSelector';
 import { shallow, mount } from 'enzyme';
 
-describe( '<AvatarSelector />', () => {
+describe( '<AvatarSelector />', () => { 
   const wrapper = mount(<AvatarSelector currentPersona='zac'/>);
 
   it('renders without exploding', () => {

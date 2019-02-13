@@ -1,17 +1,18 @@
 import React from 'react';
 import App from '../components/App';
 import SingleComment from '../components/SingleComment';
-import * as api from '../api';
 import { shallow, mount } from 'enzyme';
 
 describe('<SingleComment />', () => {
   it('renders without exploding', () => {
     const mockFunction = jest.fn();
     
-    expect( shallow( <SingleComment 
-      id='_2321' author='zac' onClick={mockFunction} currentPersona='Zac' 
-      comment="En kommentar" date='2019-02-12'>
-      </SingleComment>).length ).toEqual(1)
+    expect( shallow( 
+      <SingleComment 
+        id='_2321' author='zac' onClick={mockFunction} currentPersona='Zac' 
+        comment="En kommentar" date='2019-02-12'>
+      </SingleComment>).length)
+    .toEqual(1)
   });
   it('renders remove button when author and currentPersona is same', () => {
     const mockFunction = jest.fn();

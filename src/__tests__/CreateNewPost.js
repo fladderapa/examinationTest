@@ -4,15 +4,11 @@ import { shallow, mount } from 'enzyme';
 import * as api from '../api';
 
 describe( '<CreateNewPost />', () => {
-
   it('renders without exploding', () => {
-
     const mockFunction = jest.fn();
     expect( shallow( <CreateNewPost updatePosts={mockFunction} author="Zac"/> ).length ).toEqual(1);
-
   });
   it('sets the state by input and textarea value', () => {
-
     const mockFunction = jest.fn();
     const wrapper = mount(<CreateNewPost updatePosts={mockFunction} author="Zac"/>);
 
@@ -26,10 +22,8 @@ describe( '<CreateNewPost />', () => {
 
     expect(inputValue).toEqual(wrapper.state().title);
     expect(textAreaValue).toEqual(wrapper.state().content);
-
   })
   it('stores data to api', () => {
-
     const mockFunction = jest.fn();
     const wrapper = mount(<CreateNewPost updatePosts={mockFunction} author="Zac"/>);
 
@@ -45,7 +39,5 @@ describe( '<CreateNewPost />', () => {
     const fetchedPosts = api.fetchAllPosts();
 
     expect(fetchedPosts.length).toEqual(1);
-    
   })
-
 })
